@@ -25,7 +25,7 @@ npm install react-native-flatlist-alphabet
 or with yarn:
 
 ```bash
-yard add react-native-flatlist-alphabet
+yarn add react-native-flatlist-alphabet
 ```
 
 ## Usage
