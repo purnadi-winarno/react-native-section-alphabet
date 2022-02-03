@@ -1,38 +1,34 @@
-const sizes = {
-  containerWidth: 22,
+"use strict"
+Object.defineProperty(exports, "__esModule", { value: true })
+var sizes = {
+  containerWidth: 20,
   itemHeight: 15,
   itemFontSize: 16,
 }
-
-const styles: any = {
+var styles = {
   letterIndexContainer: {
     width: sizes.containerWidth,
-    height: "100%",
+    // height: "100%",
     position: "absolute",
-    top: 0,
-    bottom: 0,
     right: 5,
     padding: 5,
   },
-
   letterIndexList: {
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: 20,
     // height: "100%",
   },
-
   letterIndexItem: {
     width: sizes.containerWidth,
-    height: sizes.containerWidth,
+    height: sizes.itemHeight,
     alignItems: "center",
     justifyContent: "center",
   },
-
   letterIndexLabel: {
     fontSize: sizes.itemFontSize,
     fontWeight: "bold",
-    color: "rgba(255,255,255,0.5)",
+    color: "grey",
   },
 }
-
-export default styles
+exports.default = styles
