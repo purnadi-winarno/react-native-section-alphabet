@@ -11,7 +11,7 @@
     "test:unit": "jest --config jestconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist",
     "build:example": "npm run build && cd example && npm run clean:modules && cd ..",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test:unit && npm run lint",
@@ -61,6 +61,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "react-native-section-list-get-item-layout": "^2.2.3"
+    "react-native-section-list-get-item-layout": "^2.2.3",
+    "ts-debounce": "^4.0.0"
   }
 }
