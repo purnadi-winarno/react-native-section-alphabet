@@ -157,10 +157,13 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
           sectionData={this.state.sectionData}
           onPressLetter={this.onScrollToSection}
           indexLetterColor={this.props.indexLetterColor}
+          selectedIndexLetterColor={this.props.selectedIndexLetterColor}
           indexLetterSize={this.props.indexLetterSize}
+          selectedIndexLetterSize={this.props.selectedIndexLetterSize}
           letterIndexWidth={this.props.letterIndexWidth}
           containerStyle={this.props.containerStyle}
           alphabetContainer={this.props.alphabetContainer}
+          letterItemStyle={this.props.letterItemStyle}
           selectedLetterItemStyle={this.props.selectedLetterItemStyle}
         />
       </View>

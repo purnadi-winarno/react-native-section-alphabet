@@ -1,10 +1,10 @@
-import IData from "./IData"
+import IData from "./IData";
 
 export default interface Props {
   /** The array of objects data. */
-  data: IData[]
+  data: IData[];
   /** The sectionlist container style. */
-  style?: any
+  style?: any;
   /**
    * Render the list item elements.
    *
@@ -12,7 +12,7 @@ export default interface Props {
    * @returns The JSX Element component
    *
    */
-  renderItem?: (item: IData) => JSX.Element
+  renderItem?: (item: IData) => JSX.Element;
   /**
    * Render the alphabet letter header.
    *
@@ -20,8 +20,8 @@ export default interface Props {
    * @returns The JSX Element component
    *
    */
-  renderSectionHeader?: (section: any) => JSX.Element
-  onLoadMoreItems?: () => void
+  renderSectionHeader?: (section: any) => JSX.Element;
+  onLoadMoreItems?: () => void;
   /**
    * Returns the each item height position size.
    *
@@ -30,25 +30,25 @@ export default interface Props {
    * @returns Returns the each item height position size.
    *
    */
-  getItemHeight?: ({
-    sectionIndex,
-    rowIndex,
-  }: {
-    sectionIndex: number
-    rowIndex: number
-  }) => number
+  getItemHeight?: ({ sectionIndex, rowIndex }: { sectionIndex: number; rowIndex: number }) => number;
   /** The section header defines each alphabet title header size. */
-  sectionHeaderHeight?: number
+  sectionHeaderHeight?: number;
   /** The alphabet letter font-size. */
-  indexLetterColor?: string
+  indexLetterColor?: string;
+  /** The selected alphabet letter font-size. */
+  selectedIndexLetterColor?: string;
   /** The alphabet letter font-size. */
-  indexLetterSize?: number
+  indexLetterSize?: number;
+  /** The selected alphabet letter font-size. */
+  selectedIndexLetterSize?: number;
   /** The alphabet letter index width size. */
-  letterIndexWidth?: number
+  letterIndexWidth?: number;
   /** The container letter item style. */
-  selectedLetterItemStyle?: any
+  letterItemStyle?: any;
+  /** The selected container letter item style. */
+  selectedLetterItemStyle?: any;
   /** The alphabet wrapper container style. */
-  containerStyle?: any
+  containerStyle?: any;
   /** The flatlist alphabet container style. */
-  alphabetContainer?: any
+  alphabetContainer?: any;
 }
