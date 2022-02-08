@@ -1,7 +1,7 @@
 const sizes = {
   containerWidth: 16,
   itemHeight: 15,
-  itemFontSize: 16,
+  itemFontSize: 8,
 };
 
 const styles: any = {
