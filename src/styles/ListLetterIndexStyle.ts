@@ -1,8 +1,8 @@
 const sizes = {
-  containerWidth: 22,
+  containerWidth: 16,
   itemHeight: 15,
   itemFontSize: 16,
-}
+};
 
 const styles: any = {
   letterIndexContainer: {
@@ -33,6 +33,6 @@ const styles: any = {
     fontWeight: "bold",
     color: "rgba(255,255,255,0.5)",
   },
-}
+};
 
-export default styles
+export default styles;

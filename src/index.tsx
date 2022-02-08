@@ -122,7 +122,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
     const _self = this;
     if ((viewableItems?.length ?? 0) > 0) {
       const selectedLetter = viewableItems[0]?.item?.title;
-      _self.setState({ selectedLetter }), 300;
+      _self.setState({ selectedLetter });
     }
   };
 
@@ -149,6 +149,7 @@ export default class AlphabetList extends React.PureComponent<IAlphabetListProps
           removeClippedSubviews={false}
           onViewableItemsChanged={debounce(this._onViewableItemsChanged, 1000)}
           viewabilityConfig={this.viewabilityConfig}
+          onScrollEndDrag={(e) => console.log("e: ", e)}
         />
 
         <ListLetterIndex
