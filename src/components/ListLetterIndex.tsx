@@ -82,7 +82,7 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
     }
   }
 
-  getSelectedgetLetterItemStyle() {
+  getSelectedLetterItemStyle() {
     const { selectedLetterItemStyle } = this.props;
 
     if (selectedLetterItemStyle) {
@@ -96,24 +96,18 @@ export default class ListLetterIndex extends React.PureComponent<Props> {
     const computedLabelStyle = this.getComputedLabelStyle();
     const selectedComputedLabelStyle = this.getSelectedComputedLabelStyle();
     const computedItemStyle = this.getLetterItemStyle();
-    const selectedComputedItemStyle = this.getSelectedgetLetterItemStyle();
+    const selectedComputedItemStyle = this.getSelectedLetterItemStyle();
+
+    const isSelected = item?.title === this.props.selectedLetter;
+
+    if (isSelected) {
+      console.log("selectedComputedLabelStyle: ", selectedComputedLabelStyle);
+    }
 
     return (
       <TouchableOpacity onPress={() => this.props.onPressLetter(item, index)}>
-        <View
-          style={[
-            styles.letterIndexItem,
-            computedItemStyle,
-            item?.title === this.props.selectedLetter && selectedComputedItemStyle,
-          ]}
-        >
-          <Text
-            style={[
-              styles.letterIndexLabel,
-              computedLabelStyle,
-              item?.title === this.props.selectedLetter && selectedComputedLabelStyle,
-            ]}
-          >
+        <View style={[styles.letterIndexItem, computedItemStyle, isSelected ? selectedComputedItemStyle : null]}>
+          <Text style={[styles.letterIndexLabel, computedLabelStyle, isSelected ? selectedComputedLabelStyle : null]}>
             {item.title}
           </Text>
         </View>
