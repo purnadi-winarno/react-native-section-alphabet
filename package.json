@@ -1,6 +1,6 @@
 {
   "name": "react-native-flatlist-alphabet",
-  "version": "1.1.2",
+  "version": "1.1.2-patch2",
   "description": "A simple React Native component that takes an array of data and renders a SectionList with alphabetically sorted data.",
   "main": "src/index.tsx",
   "types": "dists/index.d.ts",
